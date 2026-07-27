@@ -1,0 +1,17 @@
+{
+  "name": "aerobox-pro",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "anonymize-faces": "pnpm --filter @aerobox/web anonymize-faces"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0"
+  },
+  "packageManager": "pnpm@11.17.0",
+  "engines": {
+    "pnpm": ">=11.0.0"
+  }
+}
