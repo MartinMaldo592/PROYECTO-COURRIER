@@ -1,0 +1,55 @@
+{
+  "id": "06_aeropost_peru",
+  "name": "Aeropost Perú",
+  "url": "https://aeropost.com/site/spa/peru",
+  "category": "Casillero Virtual USA -> Perú",
+  "description": "Casillero internacional para compras en USA con despacho a domicilio en Perú.",
+  "scraped_at": "2026-07-29T18:35:29.127244",
+  "page_title": "International Shipping from the U.S. to Peru, aeropost Peru",
+  "meta_description": "Experience seamless courier service from the U.S. to Peru. Unlock 7% discount on U.S. Sales Tax when using your free U.S. aeropost address and enjoy duty and VAT free benefits for products valued under $200.",
+  "headings": [],
+  "clean_markdown_content": "Loading\n* Cost Calculator\n* Restricted Products\n* About Us\n* Help\n* Terms and Conditions\n* Blogs\n© aeropost - 2026 - All Rights Reserved.",
+  "css_info": {
+    "colors": [
+      "#d1d1d1",
+      "#FB3748",
+      "#f97800",
+      "#f4f4f4",
+      "#FFA8DF",
+      "#0b3e9d",
+      "#63666d",
+      "#637381",
+      "#0D0D0D",
+      "#F96302",
+      "#F97800",
+      "#1d293d",
+      "#EF7319",
+      "#f6c143",
+      "#d5d5d5"
+    ],
+    "fonts": [
+      "Ui-Sans-Serif",
+      "Ui-Monospace",
+      "Poppins",
+      "Sofia Pro"
+    ],
+    "frameworks": [
+      "Tailwind CSS"
+    ],
+    "styles_summary": "Detectados 15 colores de acento/paleta distintivos. Tipografías principales: Ui-Sans-Serif, Ui-Monospace, Poppins, Sofia Pro."
+  },
+  "js_info": {
+    "libraries": [
+      "React.js",
+      "Vue.js"
+    ],
+    "api_endpoints": [
+      "https://login.aeropost.com/api/SignOn/PackagesAddress"
+    ],
+    "widgets": [
+      "Google Tag Manager / Analytics",
+      "Meta Pixel (Ads Tracking)"
+    ]
+  },
+  "extracted_links": []
+}

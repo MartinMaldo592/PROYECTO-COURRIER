@@ -12,12 +12,15 @@ export default {
           dark: '#f8f9fa',
           card: '#ffffff',
           border: '#e5e7eb',
-          red: '#dc2626',
-          'red-hover': '#b91c1c',
-          cyan: '#2563eb',
+          // Paleta de Confianza Suprema (Psicología del Color: Azul Marino & Azul Real + Verde Esmeralda)
+          navy: '#0f172a',
+          red: '#2563eb',          // Convertido a Azul Real de Confianza Institucional
+          'red-hover': '#1d4ed8',   // Azul Marino Intenso
+          cyan: '#3b82f6',
           blue: '#1e40af',
+          emerald: '#059669',
           gold: '#d97706',
-          slate: '#6b7280'
+          slate: '#475569'
         }
       },
       fontFamily: {

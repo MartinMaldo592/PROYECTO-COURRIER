@@ -93,7 +93,7 @@ export const SavingsCalculator: React.FC = () => {
                 
                 <div className="p-5 bg-gray-100 rounded-xl border border-gray-200 text-center space-y-2">
                   <span className="text-xs font-bold text-gray-500 uppercase block">Courier Tradicional</span>
-                  <div className="text-2xl font-bold text-gray-500 line-through">
+                  <div className="text-2xl font-bold text-gray-500 line-through tabular-nums">
                     ${traditionalCost.toLocaleString()} USD
                   </div>
                   <span className="text-[11px] text-gray-500 block">$10/kg + $15 gasto adm. + cobros extras</span>
@@ -101,7 +101,7 @@ export const SavingsCalculator: React.FC = () => {
 
                 <div className="p-5 bg-gray-100 rounded-xl border border-brand-red/40 text-center space-y-2">
                   <span className="text-xs font-bold text-brand-red uppercase block">AEROBOX PRO</span>
-                  <div className="text-3xl font-bold text-gray-900">
+                  <div className="text-3xl font-bold text-gray-900 tabular-nums">
                     ${aeroboxCost.toLocaleString()} USD
                   </div>
                   <span className="text-[11px] text-emerald-700 font-bold block">$8/kg Tarifa Plana</span>
@@ -113,11 +113,11 @@ export const SavingsCalculator: React.FC = () => {
                 <div className="flex items-center justify-center gap-2 text-emerald-700 text-xs font-bold uppercase tracking-wider">
                   <TrendingDown className="w-4 h-4" /> Ahorro Anual Proyectado ({percentageSaved}% Menos)
                 </div>
-                <div className="text-4xl sm:text-5xl font-bold text-emerald-700">
+                <div className="text-4xl sm:text-5xl font-bold text-emerald-700 tabular-nums">
                   ${totalSavingsUsd.toLocaleString()} <span className="text-sm font-bold text-gray-600">USD</span>
                 </div>
                 <p className="text-xs text-gray-500">
-                  Equivalente a <strong className="text-gray-900">S/ {(totalSavingsUsd * 3.75).toLocaleString(undefined, { maximumFractionDigits: 0 })} PEN</strong> directo a tu bolsillo.
+                  Equivalente a <strong className="text-gray-900 tabular-nums">S/ {(totalSavingsUsd * 3.75).toLocaleString(undefined, { maximumFractionDigits: 0 })} PEN</strong> directo a tu bolsillo.
                 </p>
               </div>
 

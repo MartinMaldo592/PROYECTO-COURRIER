@@ -1,0 +1,24 @@
+{
+  "id": "07_guazu_courier",
+  "name": "Guazú Courier",
+  "url": "https://www.guazucourier.com/",
+  "category": "Courier Express & Paquetería",
+  "description": "Servicio de distribución de paquetes y casillero comercial en Perú.",
+  "scraped_at": "2026-07-29T18:35:10.639372",
+  "page_title": "Guazú Courier (Página Protegida / Offline)",
+  "meta_description": "",
+  "headings": [],
+  "clean_markdown_content": "No se pudo extraer contenido directamente de https://www.guazucourier.com/. Razón: HTTPSConnectionPool(host='www.guazucourier.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.guazucourier.com', port=443): Failed to resolve 'www.guazucourier.com' ([Errno 11001] getaddrinfo failed)\"))",
+  "css_info": {
+    "colors": [],
+    "fonts": [],
+    "frameworks": [],
+    "styles_summary": ""
+  },
+  "js_info": {
+    "libraries": [],
+    "api_endpoints": [],
+    "widgets": []
+  },
+  "extracted_links": []
+}

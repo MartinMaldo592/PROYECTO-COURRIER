@@ -1,0 +1,51 @@
+{
+  "id": "08_shalom_cargo",
+  "name": "Shalom Cargo",
+  "url": "https://shalom.com.pe/",
+  "category": "Encomiendas / Agencias Masivas",
+  "description": "Servicio de logística y envío de encomiendas con red extensa de agencias en Perú.",
+  "scraped_at": "2026-07-29T18:35:31.780719",
+  "page_title": "Shalom EnvÃ­os a todo el PerÃº",
+  "meta_description": "Realizamos envÃ­os de sobres, encomiendas, paqueterÃ­a y carga a mÃ¡s de 250 destinos en todo el PerÃº y a mÃ¡s de 14 destinos aÃ©reos âï¸ en agencias seleccionadas. Contamos con el servicio de Ãºltima milla para estar mÃ¡s cerca de ti ðð¦",
+  "headings": [],
+  "clean_markdown_content": "",
+  "css_info": {
+    "colors": [
+      "#D9F3FA",
+      "#8C8C8C",
+      "#A2A2A2",
+      "#505050",
+      "#222f5c",
+      "#1656B7",
+      "#494949",
+      "#222222",
+      "#222F5C",
+      "#8898aa",
+      "#a3a3a3",
+      "#6b7280",
+      "#DDF2FB",
+      "#dceff2",
+      "#FFCC00"
+    ],
+    "fonts": [
+      "Ui-Sans-Serif",
+      "Ui-Monospace",
+      "Fira Sans",
+      "Arial"
+    ],
+    "frameworks": [
+      "Tailwind CSS"
+    ],
+    "styles_summary": "Detectados 15 colores de acento/paleta distintivos. Tipografías principales: Ui-Sans-Serif, Ui-Monospace, Fira Sans, Arial."
+  },
+  "js_info": {
+    "libraries": [
+      "Vue.js"
+    ],
+    "api_endpoints": [],
+    "widgets": [
+      "Google reCAPTCHA Security"
+    ]
+  },
+  "extracted_links": []
+}

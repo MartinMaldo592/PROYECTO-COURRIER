@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { Calculator, ShieldAlert, CheckCircle, ArrowRight, Info, AlertTriangle, Sparkles, MessageCircle } from 'lucide-react';
 import { PERU_DEPARTMENTS } from '../data/mockData';
 import { ProductCategory } from '../types';
+import { SunatTaxBadge } from './SunatTaxBadge';
+import { WhatsAppQuoteButton } from './WhatsAppQuoteButton';
 import confetti from 'canvas-confetti';
 
 export const ShippingCalculator: React.FC = () => {
@@ -169,24 +171,8 @@ export const ShippingCalculator: React.FC = () => {
               </div>
             </div>
 
-            {/* SUNAT Warning / Alert Pill */}
-            {isSunatTaxExempt ? (
-              <div className="p-4 bg-emerald-600/10 border border-emerald-500/30 rounded-xl flex items-start gap-3 text-xs text-emerald-700">
-                <CheckCircle className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
-                <div>
-                  <strong className="block text-gray-900 font-bold text-sm">¡Excelente! Exonerado de Impuestos SUNAT</strong>
-                  Tu compra es menor a $200.00 USD. No pagas IGV ni arancel aduanero en Perú.
-                </div>
-              </div>
-            ) : (
-              <div className="p-4 bg-amber-600/10 border border-amber-500/30 rounded-xl flex items-start gap-3 text-xs text-amber-600">
-                <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <strong className="block text-gray-900 font-bold text-sm">Aviso SUNAT: Excede los $200.00 USD</strong>
-                  Tu compra está sujeta a impuestos de aduana en Perú (~22% estimado). Nuestro agente de aduanas realiza todo el trámite por ti.
-                </div>
-              </div>
-            )}
+            {/* SUNAT Tax Badge & Rule Component */}
+            <SunatTaxBadge productValueUsd={declaredValueUsd} />
 
             {/* Optional Toggles */}
             <div className="space-y-3 pt-2">
@@ -233,19 +219,19 @@ export const ShippingCalculator: React.FC = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center justify-between text-gray-500">
                 <span>Flete Aéreo (${roundedWeightKg.toFixed(1)} kg x $8.00):</span>
-                <span className="font-bold text-gray-900">${baseShippingUsd.toFixed(2)} USD</span>
+                <span className="font-bold text-gray-900 tabular-nums">${baseShippingUsd.toFixed(2)} USD</span>
               </div>
 
               <div className="flex items-center justify-between text-gray-500">
                 <span>Impuestos SUNAT (FOB &gt; $200):</span>
-                <span className="font-bold text-gray-900">
+                <span className="font-bold text-gray-900 tabular-nums">
                   {estimatedSunatTaxesUsd === 0 ? '$0.00 (Exonerado)' : `$${estimatedSunatTaxesUsd.toFixed(2)} USD`}
                 </span>
               </div>
 
               <div className="flex items-center justify-between text-gray-500">
                 <span>Seguro de Carga:</span>
-                <span className="font-bold text-gray-900">
+                <span className="font-bold text-gray-900 tabular-nums">
                   {insuranceUsd === 0 ? 'Sin seguro' : `$${insuranceUsd.toFixed(2)} USD`}
                 </span>
               </div>
@@ -253,7 +239,7 @@ export const ShippingCalculator: React.FC = () => {
               {includeBuyForMe && (
                 <div className="flex items-center justify-between text-gray-500">
                   <span>Comisión "Compramos por Ti":</span>
-                  <span className="font-bold text-amber-600">${buyForMeUsd.toFixed(2)} USD</span>
+                  <span className="font-bold text-amber-600 tabular-nums">${buyForMeUsd.toFixed(2)} USD</span>
                 </div>
               )}
 
@@ -273,21 +259,23 @@ export const ShippingCalculator: React.FC = () => {
             <div className="pt-4 border-t border-gray-200 space-y-1">
               <span className="text-xs font-bold text-gray-500 uppercase tracking-wider block">Costo Total Estimado</span>
               <div className="flex items-baseline justify-between">
-                <span className="text-3xl font-bold text-gray-900">${totalUsd.toFixed(2)} <span className="text-sm font-normal text-gray-500">USD</span></span>
-                <span className="text-lg font-bold text-emerald-700">S/ {totalPen.toFixed(2)} <span className="text-xs text-gray-500">PEN</span></span>
+                <span className="text-3xl font-bold text-gray-900 tabular-nums">${totalUsd.toFixed(2)} <span className="text-sm font-normal text-gray-500">USD</span></span>
+                <span className="text-lg font-bold text-emerald-700 tabular-nums">S/ {totalPen.toFixed(2)} <span className="text-xs text-gray-500">PEN</span></span>
               </div>
               <p className="text-[11px] text-gray-500 pt-1">
                 Tipo de cambio referencial S/ 3.75 por dólar.
               </p>
             </div>
 
-            <button
-              onClick={handleExportQuote}
-              className="w-full py-4 bg-brand-red hover:bg-brand-red-hover text-gray-900 font-bold text-base rounded-xl transition-all flex items-center justify-center gap-2"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Enviar Cotización por WhatsApp
-            </button>
+            <WhatsAppQuoteButton
+              weightKg={weightKg}
+              weightLb={weightUnit === 'lb' ? weightKg : undefined}
+              productValueUsd={declaredValueUsd}
+              estimatedTotalUsd={totalUsd}
+              destinationCity={deptInfo.name}
+              className="w-full"
+              label="Enviar Cotización por WhatsApp"
+            />
 
           </div>
 

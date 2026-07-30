@@ -44,11 +44,11 @@ export const AIAssistantWidget: React.FC = () => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 p-4 bg-brand-red hover:bg-brand-red-hover text-gray-900 rounded-2xl transition-all flex items-center gap-2"
+        className="fixed bottom-6 left-6 z-40 p-4 bg-brand-red hover:bg-brand-red-hover text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0"
         aria-label="Abrir asistente"
       >
         <Bot className="w-6 h-6" />
-        <span className="hidden sm:inline font-bold text-xs">Asistente IA 24/7</span>
+        <span className="hidden sm:inline text-xs font-bold">Asistente IA 24/7</span>
       </button>
 
       {/* Chat Drawer */}
@@ -58,7 +58,7 @@ export const AIAssistantWidget: React.FC = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-32px)] sm:w-96 bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col h-[480px]"
+            className="fixed bottom-24 left-4 sm:left-6 z-50 w-[calc(100vw-32px)] sm:w-96 bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col h-[480px] shadow-2xl"
           >
             <div className="p-4 bg-gray-100 border-b border-gray-200 flex items-center justify-between">
               <div className="flex items-center gap-2.5">

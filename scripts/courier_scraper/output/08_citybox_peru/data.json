@@ -1,0 +1,24 @@
+{
+  "id": "08_citybox_peru",
+  "name": "Citybox Perú",
+  "url": "https://www.cityboxperu.com/",
+  "category": "Casillero Postal & Compras USA",
+  "description": "Solución de compras internacionales y envíos a domicilio.",
+  "scraped_at": "2026-07-29T18:35:11.194627",
+  "page_title": "Citybox Perú (Página Protegida / Offline)",
+  "meta_description": "",
+  "headings": [],
+  "clean_markdown_content": "No se pudo extraer contenido directamente de https://www.cityboxperu.com/. Razón: HTTPSConnectionPool(host='www.cityboxperu.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))",
+  "css_info": {
+    "colors": [],
+    "fonts": [],
+    "frameworks": [],
+    "styles_summary": ""
+  },
+  "js_info": {
+    "libraries": [],
+    "api_endpoints": [],
+    "widgets": []
+  },
+  "extracted_links": []
+}

@@ -1,0 +1,24 @@
+{
+  "id": "09_boxexpress",
+  "name": "Box Express Perú",
+  "url": "https://www.boxexpressperu.com/",
+  "category": "Importación & Cargo Express",
+  "description": "Servicio de consolidación de carga y envíos rápidos.",
+  "scraped_at": "2026-07-29T18:35:11.350457",
+  "page_title": "Box Express Perú (Página Protegida / Offline)",
+  "meta_description": "",
+  "headings": [],
+  "clean_markdown_content": "No se pudo extraer contenido directamente de https://www.boxexpressperu.com/. Razón: HTTPSConnectionPool(host='www.boxexpressperu.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.boxexpressperu.com', port=443): Failed to resolve 'www.boxexpressperu.com' ([Errno 11001] getaddrinfo failed)\"))",
+  "css_info": {
+    "colors": [],
+    "fonts": [],
+    "frameworks": [],
+    "styles_summary": ""
+  },
+  "js_info": {
+    "libraries": [],
+    "api_endpoints": [],
+    "widgets": []
+  },
+  "extracted_links": []
+}

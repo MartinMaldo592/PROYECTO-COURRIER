@@ -1,0 +1,67 @@
+{
+  "id": "10_chazki",
+  "name": "Chazki",
+  "url": "https://chazki.com/",
+  "category": "Última Milla / E-commerce",
+  "description": "Solución de logística urbana y distribución de paquetes para comercio electrónico.",
+  "scraped_at": "2026-07-29T18:35:35.578282",
+  "page_title": "Chazki I Logística de Primera, Media y Última Milla",
+  "meta_description": "La mejor experiencia logística para crecer tu negocio. Contamos con tecnología propia, integraciones con múltiples plataformas, software as a service y conductores afiliados para entregas de primera, media y última milla.",
+  "headings": [
+    "H2: Soluciones logísticas para potenciar elcrecimiento y éxitode tu eCommerce",
+    "H3: Clientes quenos confíansu logística",
+    "H2: Solucioneslogísticaspara los desafíos que impactan tu negocio",
+    "H2: Transformamostus retos logísticosen oportunidades",
+    "H2: Nuestrosproductos*",
+    "H2: Primera y Media Milla",
+    "H2: Última Milla",
+    "H2: SaaS",
+    "H2: Fulfillment",
+    "H2: La experienciadel clientees nuestra máxima prioridad",
+    "H2: Somos unaliadopara el crecimiento de tu negocio",
+    "H1: +280",
+    "H1: +20M",
+    "H2: Nosintegramoscon lasplataformas eCommercemás reconocidas",
+    "H2: SérepartidorconChazki"
+  ],
+  "clean_markdown_content": "0\nSaltar al contenido\nConversemos\nAbrir menú\nCerrar menú\nAbrir menú\nCerrar menú\nConversemos\n## Soluciones logísticas para potenciar el *crecimiento y éxito* de tu eCommerce\nCon tecnología avanzada y un enfoque personalizado, optimizamos cada paso de tu cadena de suministro para impulsar tu crecimiento y competitividad en el mercado.\nEmpieza a optimizar tu logística\n### **Clientes que** ***nos confían*** su logística\n## *Soluciones* *logísticas* para los desafíos que impactan tu negocio\nDesde la optimización de la cadena de suministro hasta la entrega. En **Chazki**, entendemos estos desafíos y ofrecemos **soluciones logísticas innovadoras y personalizadas** para asegurar que tu negocio opere con máxima eficiencia, minimizando costos y maximizando la satisfacción del cliente.\nAquí algunos **problemas** a resolver:\n* Ineficiencia en la cadena de suministro\n**Problema:** La falta de coordinación y visibilidad en las operaciones logísticas puede generar retrasos, costos adicionales y una mala experiencia para el cliente.\n* Falta de adaptabilidad tecnológica\n**Problema:** Las empresas que no adoptan soluciones tecnológicas adecuadas pueden quedarse atrás en un mercado cada vez más competitivo.\n* Dificultades en la entrega\n**Problema:** La entrega de productos al cliente final es uno de los desafíos más complejos y costosos, especialmente en áreas urbanas.\n## *Transformamos* tus retos logísticos en oportunidades\nNuestros productos de **Primera y Media Milla** aseguran una recolección y transporte óptimos, mientras que nuestras soluciones de **Última Milla** garantizan una entrega eficiente y puntual, adaptada a las necesidades de tus clientes. Además, con nuestra avanzada plataforma de **Software as a Service (SaaS)**, puedes gestionar y optimizar cada aspecto de tu **cadena de suministro**, reduciendo costos operativos y mejorando la visibilidad de tus operaciones.\nHabla con nuestros especialistas\n## Nuestros *productos\\**\n*\\*Los productos aplican de acuerdo al país y a la zona de atención.*\n* ## Primera y Media Milla\nTransporte desde centros de producción a centros de distribución\nVer +\n* ## Última Milla\nDesde la optimización de rutas hasta la entrega puntual\nVer +\n* ## SaaS\nSoftware que ofrece una gran oportunidad de agilidad y rentabilidad\nVer +\n* ## Fulfillment\nAlmacenamos tu mercancía para una operación más flexible\nVer +\nNos esforzamos por ofrecer un **servicio excepcional** que supere las expectativas en cada interacción. Nuestro equipo de **CX** esta conformado por 3 frentes:\n* **CX Live:** Dedicados al seguimiento y soporte en tiempo real de los pedidos express.\n* **CX Non Live:**Sistema de **atención omnicanal** a través de correo electrónico, chat, WhatsApp o redes sociales. Tiempo de resolución de consultas: máx. 72 horas.\n* **Calidad y mejora continua:**Monitoreo y medición de la calidad **(NPS)**. Capacitación y desarrollo del personal.\n## *La experiencia* *del cliente* es nuestra máxima prioridad\n## Somos un *aliado* para el crecimiento de tu negocio\nEstamos presentes en **más de 20 ciudades en 6 países** de Hispanoamérica:\n* **Logística:** México, Colombia, Perú, Chile y Argentina.\n* **SaaS:** Ecuador\n# +280\n**Clientes activos**\n# +20M\n**Entregas realizadas**\n# 99%\n**Efectividad**\n## Nos *integramos* con las plataformas eCommerce más reconocidas\n**Conectamos tu tienda** con nuestra plataforma para que tus clientes y tu puedan visualizar y gestionar los envíos desde cualquier dispositivo.\n## Sé *repartidor* con Chazki\nSi quieres ser repartidor o tienes una empresa con vehículos y repartidores, **regístrate ahora** y comienza a generar mayores ingresos.\nSoy driver\nSoy empresa",
+  "css_info": {
+    "colors": [
+      "#999",
+      "#e99292",
+      "#ccc",
+      "#1e1e1e",
+      "#fafafa",
+      "#111",
+      "#040404",
+      "#cc3b3b",
+      "#272727",
+      "#333",
+      "#bd0000",
+      "#aaa",
+      "#666",
+      "#e1e1e1",
+      "#fbfbfb"
+    ],
+    "fonts": [
+      "Sans-Serif",
+      "Helvetica Neue",
+      "Montserrat"
+    ],
+    "frameworks": [],
+    "styles_summary": "Detectados 15 colores de acento/paleta distintivos. Tipografías principales: Sans-Serif, Helvetica Neue, Montserrat."
+  },
+  "js_info": {
+    "libraries": [
+      "Vue.js"
+    ],
+    "api_endpoints": [],
+    "widgets": [
+      "Google Tag Manager / Analytics",
+      "Meta Pixel (Ads Tracking)",
+      "WhatsApp Chat / Support Directo",
+      "Google reCAPTCHA Security"
+    ]
+  },
+  "extracted_links": []
+}

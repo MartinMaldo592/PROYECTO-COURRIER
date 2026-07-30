@@ -1,86 +1,158 @@
 'use client';
 
 import React from 'react';
-import { Plane, MapPin, Phone, Mail, Clock, ShieldCheck, Lock } from 'lucide-react';
+import { Plane, MapPin, Clock, Mail, BookOpen, Facebook, Instagram } from 'lucide-react';
+import { OfficialWhatsAppIcon } from './FloatingWhatsAppButton';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 pt-16 pb-12 text-gray-500 text-xs">
+    <footer className="bg-[#0b132b] text-slate-300 pt-16 pb-8 border-t border-slate-800 text-xs font-sans">
       <div className="container mx-auto px-4 lg:px-8 space-y-12">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        {/* Main 5-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 items-start">
           
-          <div className="lg:col-span-2 space-y-4">
-            <a href="#" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-brand-red flex items-center justify-center text-gray-900">
+          {/* Column 1: Brand & Socials (3 cols) */}
+          <div className="lg:col-span-3 space-y-4">
+            <a href="#" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
                 <Plane className="w-5 h-5" />
               </div>
-              <span className="text-xl font-extrabold text-gray-900 tracking-wider">
-                AEROBOX <span className="text-brand-red">PRO</span>
-              </span>
+              <div>
+                <span className="text-xl font-extrabold text-white tracking-wider">
+                  AEROBOX <span className="text-blue-500">PRO</span>
+                </span>
+                <span className="block text-[9px] font-bold text-slate-400 tracking-widest uppercase">
+                  Courier USA → Perú
+                </span>
+              </div>
             </a>
-            <p className="text-gray-500 max-w-sm leading-relaxed">
-              Plataforma de courier internacional especializada en importar productos desde Estados Unidos a cualquier ciudad del Perú por <strong className="text-gray-900">$8.00 USD/kg</strong>.
+
+            <p className="text-slate-400 text-xs leading-relaxed">
+              Servicio de courier seguro y confiable de USA a Perú.
             </p>
-            <div className="flex items-center gap-3 text-gray-500">
-              <span className="flex items-center gap-1"><Lock className="w-3.5 h-3.5 text-emerald-700" /> SSL 256-bit</span>
-              <span>•</span>
-              <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-brand-red" /> SUNAT Licencia</span>
+
+            {/* Social Links Icons */}
+            <div className="flex items-center gap-3 pt-1">
+              <a
+                href="#"
+                className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all font-bold text-[11px]"
+                aria-label="TikTok"
+              >
+                <span>d</span>
+              </a>
             </div>
           </div>
 
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Servicios</h4>
-            <ul className="space-y-2">
-              <li><a href="#como-funciona" className="hover:text-gray-900 transition-colors">¿Cómo Funciona?</a></li>
-              <li><a href="#calculadora" className="hover:text-gray-900 transition-colors">Calculadora de Tarifas</a></li>
-              <li><a href="#ahorro" className="hover:text-gray-900 transition-colors">Comparador de Ahorro</a></li>
-              <li><a href="#consolidacion" className="hover:text-gray-900 transition-colors">Consolidación en Miami</a></li>
-              <li><a href="#tiendas" className="hover:text-gray-900 transition-colors">Tiendas Compatibles</a></li>
+          {/* Column 2: Enlaces Rápidos (2 cols) */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-sm font-bold text-white tracking-wide">Enlaces rápidos</h4>
+            <ul className="space-y-2 text-slate-400 font-medium">
+              <li><a href="#como-funciona" className="hover:text-white transition-colors">Cómo funciona</a></li>
+              <li><a href="#calculadora" className="hover:text-white transition-colors">Calculadora</a></li>
+              <li><a href="#tiendas" className="hover:text-white transition-colors">Cómo comprar en USA</a></li>
+              <li><a href="#calculadora" className="hover:text-white transition-colors">Dirección de USA</a></li>
+              <li><a href="#consolidacion" className="hover:text-white transition-colors">Importa desde China</a></li>
+              <li><a href="#ahorro" className="hover:text-white transition-colors">AeroPuntos</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
 
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Oficinas Físicas</h4>
-            <div className="space-y-3 text-gray-500">
-              <div>
-                <strong className="text-gray-900 block font-semibold">Almacén Miami (USA):</strong>
-                <span>8300 NW 30th Terrace, Ste 400, Doral, FL 33122</span>
+          {/* Column 3: Información (2 cols) */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-sm font-bold text-white tracking-wide">Información</h4>
+            <ul className="space-y-3.5 text-slate-400 font-medium">
+              <li>
+                <a href="#" className="hover:text-white transition-colors block">
+                  Términos y condiciones
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
+                  <div className="p-1 bg-amber-500/20 text-amber-500 rounded group-hover:scale-110 transition-transform">
+                    <BookOpen className="w-4 h-4" />
+                  </div>
+                  <span className="font-semibold text-slate-200">Libro de reclamaciones</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Nuestra Oficina (2 cols) */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-sm font-bold text-white tracking-wide">Nuestra oficina</h4>
+            <div className="space-y-3 text-slate-400">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
+                  <strong className="text-slate-200 font-medium block">Surquillo, Lima - Perú</strong>
+                  <span className="text-[11px] block">Jirón Dante 454, 3er piso</span>
+                </div>
               </div>
-              <div>
-                <strong className="text-gray-900 block font-semibold">Centro Operativo Lima (Perú):</strong>
-                <span>Av. Javier Prado Este 2450, San Isidro, Lima</span>
+
+              <div className="flex items-start gap-2.5">
+                <Clock className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
+                  <span className="text-[11px] block text-slate-300 font-medium">Lun - Vie: 9:00 am - 6:00 pm</span>
+                  <span className="text-[11px] block">Sáb: 9:00 am - 1:00 pm</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Atención al Cliente</h4>
-            <ul className="space-y-2 text-gray-500">
-              <li className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-brand-red" />
-                <span>+51 987 654 321</span>
+          {/* Column 5: Atención al Cliente & CTA WhatsApp (3 cols) */}
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="text-sm font-bold text-white tracking-wide">Atención al cliente</h4>
+            
+            <ul className="space-y-2.5 text-slate-300 font-medium">
+              <li className="flex items-center gap-2.5">
+                <OfficialWhatsAppIcon className="w-4 h-4 text-emerald-400 shrink-0" />
+                <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-mono">
+                  +51 987 654 321
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-brand-red" />
-                <span>soporte@aerobox.pe</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5 text-emerald-700" />
-                <span>Lun - Sáb: 8:00 AM - 8:00 PM</span>
+              <li className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
+                <a href="mailto:contacto@aeroboxpro.pe" className="hover:text-white transition-colors">
+                  contacto@aeroboxpro.pe
+                </a>
               </li>
             </ul>
+
+            {/* Prominent Green WhatsApp CTA Button */}
+            <a
+              href="https://wa.me/51987654321?text=Hola%20AEROBOX%20PRO,%20quisiera%20cotizar%20un%20env%C3%ADo."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 w-full py-3 px-5 bg-[#10b981] hover:bg-[#059669] text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-900/30 transition-all duration-300 hover:scale-[1.02] active:scale-95"
+            >
+              <OfficialWhatsAppIcon className="w-4 h-4" />
+              <span>Cotizar por WhatsApp</span>
+            </a>
           </div>
 
         </div>
 
-        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <p>© 2026 AEROBOX PRO Logistics Inc. Todos los derechos reservados. RUC 20601234567.</p>
-          <div className="flex items-center gap-3 text-[11px] font-bold text-gray-500">
-            <span className="px-2.5 py-1 bg-gray-100 rounded border border-gray-200">Yape / Plin</span>
-            <span className="px-2.5 py-1 bg-gray-100 rounded border border-gray-200">BCP / Interbank</span>
-            <span className="px-2.5 py-1 bg-gray-100 rounded border border-gray-200">Visa / Mastercard</span>
-          </div>
+        {/* Bottom Bar: Copyright & Credits */}
+        <div className="pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+          <p>© 2026 Aerobox Pro. Todos los derechos reservados.</p>
+          <p>
+            Desarrollado y diseñado por <strong className="text-slate-200">Aerobox Pro Team</strong>.
+          </p>
         </div>
 
       </div>

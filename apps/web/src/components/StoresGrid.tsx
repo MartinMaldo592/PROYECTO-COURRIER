@@ -1,99 +1,70 @@
 'use client';
 
-import React, { useState } from 'react';
-import { COMPATIBLE_STORES } from '../data/mockData';
-import { StoreItem } from '../types';
-import { ExternalLink, Search } from 'lucide-react';
+import React from 'react';
+import { ShoppingBag, CheckCircle2, Globe2 } from 'lucide-react';
 
 export const StoresGrid: React.FC = () => {
-  const [filterCategory, setFilterCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-
-  const filteredStores = COMPATIBLE_STORES.filter((store) => {
-    const matchesCategory = filterCategory === 'all' || store.category === filterCategory;
-    const matchesSearch = store.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          store.popularItems.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const featuredStores = [
+    { name: 'Amazon USA', category: 'General', icon: '🛒' },
+    { name: 'Apple Store', category: 'Tech', icon: '🍎' },
+    { name: 'Nike USA', category: 'Moda', icon: '👟' },
+    { name: 'eBay USA', category: 'General', icon: '📦' },
+    { name: 'BestBuy', category: 'Tech', icon: '💻' },
+    { name: 'Walmart', category: 'General', icon: '🏬' },
+    { name: 'Sephora', category: 'Belleza', icon: '💄' },
+    { name: "Carter's", category: 'Niños', icon: '👶' },
+    { name: 'B&H Photo', category: 'Cámaras', icon: '📷' },
+    { name: 'Shein USA', category: 'Moda', icon: '👗' },
+    { name: "Macy's", category: 'Moda', icon: '🛍️' },
+    { name: 'StockX / GOAT', category: 'Zapatillas', icon: '🔥' },
+    { name: 'Newegg', category: 'Gaming', icon: '🎮' },
+    { name: 'Disneystore', category: 'Juguetes', icon: '✨' },
+    { name: 'Victoria Secret', category: 'Moda', icon: '💖' },
+    { name: 'Ralph Lauren', category: 'Lujo', icon: '👔' },
+  ];
 
   return (
-    <section id="tiendas" className="py-24 bg-[#f8f9fa]">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="tiendas" className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200/80">
+      <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
         
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <span className="text-xs font-bold tracking-widest text-brand-red uppercase bg-brand-red/10 px-3.5 py-1.5 rounded-full">
-            Sin Límites de Compra
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto space-y-2 mb-8">
+          <span className="text-[11px] font-extrabold tracking-widest text-blue-700 uppercase bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+            Sin Límites de Tiendas
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
-            Compra en <span className="text-brand-red">Cualquier Tienda</span> de EE.UU.
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            Compra en <span className="text-blue-600">Cualquier Tienda</span> de EE.UU.
           </h2>
-          <p className="text-base sm:text-lg text-gray-500">
-            Recibimos compras de todas las tiendas virtuales de Estados Unidos.
+          <p className="text-xs sm:text-sm text-slate-600 font-medium">
+            Recibimos compras de absolutamente todas las plataformas y tiendas virtuales de Estados Unidos.
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
-          
-          <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
-            {['all', 'tech', 'fashion', 'general', 'luxury'].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilterCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold capitalize transition-all whitespace-nowrap ${
-                  filterCategory === cat
-                    ? 'bg-brand-red text-gray-900'
-                    : 'bg-gray-100 border border-gray-200 text-gray-500 hover:text-gray-900'
-                }`}
-              >
-                {cat === 'all' ? 'Todas' : cat}
-              </button>
-            ))}
-          </div>
-
-          <div className="relative w-full sm:w-64">
-            <Search className="w-4 h-4 text-neutral-600 absolute left-3.5 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              placeholder="Buscar tienda..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-gray-100 border border-gray-200 rounded-xl pl-10 pr-4 py-2 text-xs text-gray-900 focus:outline-none focus:border-brand-red"
-            />
-          </div>
-
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filteredStores.map((store) => (
+        {/* Ultra Compact Store Mention Chips Grid */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-6">
+          {featuredStores.map((store) => (
             <div
-              key={store.id}
-              className="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-red/40 transition-all flex flex-col justify-between"
+              key={store.name}
+              className="bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 group cursor-default"
             >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-base font-bold text-gray-900">
-                    {store.name}
-                  </span>
-                  <a
-                    href={store.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-1.5 bg-gray-100 rounded-lg text-gray-500 hover:text-gray-900 transition-colors"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-                <p className="text-xs text-gray-500 line-clamp-2">
-                  <strong className="text-gray-500">Populares:</strong> {store.popularItems}
-                </p>
-              </div>
-
-              <div className="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between text-[11px] font-semibold text-brand-red">
-                <span>Casillero Miami</span>
-                <span className="text-emerald-700">✓ Aceptado</span>
-              </div>
+              <span className="text-sm">{store.icon}</span>
+              <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                {store.name}
+              </span>
             </div>
           ))}
+
+          {/* Plus 1000 Stores Badge */}
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold flex items-center gap-1.5 shadow-md shadow-blue-600/20">
+            <Globe2 className="w-4 h-4" />
+            <span>y +1,000 tiendas más de EE.UU.</span>
+          </div>
+        </div>
+
+        {/* Compatibility Confirmation Banner */}
+        <div className="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-center max-w-2xl mx-auto flex items-center justify-center gap-2 text-xs font-bold text-blue-900">
+          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+          <span>100% de las tiendas online de EE.UU. son compatibles con la dirección de tu casillero en Miami.</span>
         </div>
 
       </div>

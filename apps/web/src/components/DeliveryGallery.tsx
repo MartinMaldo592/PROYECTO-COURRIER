@@ -1,11 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Camera, ShieldCheck, MapPin, CheckCircle, ExternalLink, X, ZoomIn } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Camera, ShieldCheck, MapPin, X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const DeliveryGallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeDot, setActiveDot] = useState(0);
+  const [maxScroll, setMaxScroll] = useState(0);
 
   // List of downloaded real delivery photos from public/deliveries
   const deliveryPhotos = [
@@ -21,11 +24,60 @@ export const DeliveryGallery: React.FC = () => {
     { src: '/deliveries/IMG_20260406_202335.jpg', title: 'Delivery Final con Cliente', location: 'Lima (Jesús María)', date: 'Abril 2026' },
   ];
 
+  // Update dots indicator on scroll
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setMaxScroll(scrollWidth - clientWidth);
+      
+      // Calculate active dot based on card width
+      const cardWidth = scrollRef.current.firstElementChild
+        ? (scrollRef.current.firstElementChild as HTMLElement).offsetWidth + 16 // card + gap
+        : clientWidth;
+      
+      const index = Math.round(scrollLeft / cardWidth);
+      setActiveDot(Math.min(index, deliveryPhotos.length - 1));
+    }
+  };
+
+  useEffect(() => {
+    // Initial measurement
+    handleScroll();
+  }, []);
+
+  const scrollByAmount = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const cardWidth = scrollRef.current.firstElementChild
+        ? (scrollRef.current.firstElementChild as HTMLElement).offsetWidth + 16
+        : clientWidth;
+      
+      const scrollAmount = direction === 'left' ? -cardWidth * 2 : cardWidth * 2;
+      scrollRef.current.scrollTo({
+        left: scrollLeft + scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const scrollToDot = (dotIndex: number) => {
+    if (scrollRef.current) {
+      const cardWidth = scrollRef.current.firstElementChild
+        ? (scrollRef.current.firstElementChild as HTMLElement).offsetWidth + 16
+        : scrollRef.current.clientWidth;
+      
+      scrollRef.current.scrollTo({
+        left: dotIndex * cardWidth,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
-    <section id="entregas" className="py-24 bg-[#f8f9fa] border-t border-gray-200">
+    <section id="entregas" className="py-24 bg-[#f8f9fa] border-t border-gray-200 overflow-hidden">
+      {/* Section Header Container */}
       <div className="container mx-auto px-4 lg:px-8">
-        
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
           <span className="text-xs font-bold tracking-widest text-emerald-700 uppercase bg-emerald-500/10 px-3.5 py-1.5 rounded-full">
             Evidencia Real
           </span>
@@ -33,49 +85,95 @@ export const DeliveryGallery: React.FC = () => {
             Fotos Reales de Entregas a Domicilio
           </h2>
           <p className="text-base sm:text-lg text-gray-500">
-            Fotografías originales capturadas por nuestro equipo de reparto.
+            Desliza con el dedo en tu celular para ver todas nuestras entregas.
           </p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          {deliveryPhotos.map((photo, idx) => (
-            <div
-              key={idx}
-              onClick={() => setSelectedImage(photo.src)}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col"
-            >
-              <div className="relative h-56 overflow-hidden bg-black">
-                <img
-                  src={photo.src}
-                  alt={photo.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80';
-                  }}
-                />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+      {/* Edge-to-Edge Carousel con margen mínimo sutil a los lados */}
+      <div className="relative w-full px-3 sm:px-6 lg:px-8 xl:px-10">
+          
+          {/* Scrollable touch-swipe viewport */}
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="flex gap-5 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 pt-2 px-1 scrollbar-none"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            }}
+          >
+            {deliveryPhotos.map((photo, idx) => (
+              <div
+                key={idx}
+                onClick={() => setSelectedImage(photo.src)}
+                className="snap-start shrink-0 w-[85%] sm:w-[45%] md:w-[35%] lg:w-[28%] xl:w-[22%] 2xl:w-[18%] bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-emerald-500 hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col shadow-sm select-none transform hover:-translate-y-1"
+              >
+                <div className="relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-gray-900">
+                  <img
+                    src={photo.src}
+                    alt={photo.title}
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80';
+                    }}
+                  />
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-                <div className="absolute top-3 left-3 flex items-center gap-1 text-[10px] font-bold text-gray-900 bg-white/90 px-2.5 py-1 rounded-full">
-                  <Camera className="w-3 h-3 text-emerald-700" />
-                  <span>Foto Real</span>
-                </div>
+                  <div className="absolute top-3.5 left-3.5 flex items-center gap-1.5 text-xs font-bold text-gray-900 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+                    <Camera className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>Foto Real</span>
+                  </div>
 
-                <div className="absolute bottom-3 left-3 right-3 space-y-0.5">
-                  <span className="text-xs font-bold text-gray-900 block">
-                    {photo.title}
-                  </span>
-                  <div className="flex items-center gap-1 text-[11px] text-gray-500">
-                    <MapPin className="w-3 h-3 text-brand-red" />
-                    <span>{photo.location}</span>
+                  <div className="absolute bottom-4 left-4 right-4 space-y-1 z-10">
+                    <span className="text-sm sm:text-base font-bold text-white block truncate drop-shadow-sm">
+                      {photo.title}
+                    </span>
+                    <div className="flex items-center gap-1.5 text-xs text-gray-200 font-medium">
+                      <MapPin className="w-3.5 h-3.5 text-brand-red shrink-0" />
+                      <span className="truncate">{photo.location}</span>
+                    </div>
+                  </div>
+
+                  <div className="absolute top-3.5 right-3.5 p-2 bg-white/90 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity text-gray-900 shadow-md">
+                    <ZoomIn className="w-4 h-4" />
                   </div>
                 </div>
-
-                <div className="absolute top-3 right-3 p-1.5 bg-white/90 rounded-full opacity-0 group-hover:opacity-100 transition-opacity text-gray-900">
-                  <ZoomIn className="w-4 h-4" />
-                </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+          {/* Floating Edge Navigation Buttons */}
+          <button
+            onClick={() => scrollByAmount('left')}
+            className="hidden sm:flex absolute left-1 sm:left-4 top-1/2 -translate-y-1/2 p-3 bg-white/95 backdrop-blur-md rounded-full border border-gray-200 shadow-xl hover:bg-white hover:border-emerald-500 hover:scale-110 transition-all text-gray-800 focus:outline-none z-20"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={() => scrollByAmount('right')}
+            className="hidden sm:flex absolute right-1 sm:right-4 top-1/2 -translate-y-1/2 p-3 bg-white/95 backdrop-blur-md rounded-full border border-gray-200 shadow-xl hover:bg-white hover:border-emerald-500 hover:scale-110 transition-all text-gray-800 focus:outline-none z-20"
+            aria-label="Siguiente"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Indicators (Dots) */}
+        <div className="flex justify-center items-center gap-2 mt-8">
+          {deliveryPhotos.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollToDot(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === activeDot
+                  ? 'bg-emerald-600 w-5'
+                  : 'bg-gray-300 hover:bg-gray-400'
+              }`}
+              aria-label={`Ir al slide ${index + 1}`}
+            />
           ))}
         </div>
 
@@ -83,8 +181,6 @@ export const DeliveryGallery: React.FC = () => {
           <ShieldCheck className="w-4 h-4 text-emerald-700" />
           <span>Fotografías originales reales.</span>
         </div>
-
-      </div>
 
       <AnimatePresence>
         {selectedImage && (
@@ -113,3 +209,4 @@ export const DeliveryGallery: React.FC = () => {
     </section>
   );
 };
+

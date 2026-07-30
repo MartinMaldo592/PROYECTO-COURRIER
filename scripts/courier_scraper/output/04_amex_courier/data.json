@@ -1,0 +1,57 @@
+{
+  "id": "04_amex_courier",
+  "name": "Amex Courier Perú",
+  "url": "https://amexcourierperu.com/",
+  "category": "Logística Courier & Encomiendas",
+  "description": "Empresa especializada en logística y envío de documentos y paquetería en Perú.",
+  "scraped_at": "2026-07-29T18:35:26.271070",
+  "page_title": "Courier de USA a Perú | Courier de USA a Perú",
+  "meta_description": "",
+  "headings": [
+    "H2: ¿Cómo funciona?",
+    "H3: Compra",
+    "H3: Contáctanos",
+    "H3: Recibe tu producto",
+    "H2: ¿Contáctanos",
+    "H1: Rapidez y Calidad",
+    "H2: Ahorra comprando en USA y tráelo con Amex Courier",
+    "H2: Te traemos tu producto al toque"
+  ],
+  "clean_markdown_content": "+051 942804464\ncontacto@amexcourierperu.com\n* Facebook\n* Instagram\n* Facebook\n* Instagram\nSeleccionar página\n## ¿Cómo funciona?\n\n### Compra\nHaz tu compra  en cualquier tienda online\n\n### Contáctanos\nEscríbenos al Whatsapp\n\n### Recibe tu producto\nTu producto está listo, elije la forma de entrega\n## ¿Contáctanos\nNombre\nTelefono\nDirección de correo electrónico\nMensaje\nEnviar\n# Rapidez y Calidad\nAl alcance de tus manos\n## Ahorra comprando en USA y tráelo con Amex Courier\n## Te traemos tu producto al toque",
+  "css_info": {
+    "colors": [
+      "#75af36",
+      "#9b51e0",
+      "#34e2e4",
+      "#f8f9fa",
+      "#e9ecef",
+      "#cf2e2e",
+      "#117a8b",
+      "#7bdcb5",
+      "#28a745",
+      "#7a00df",
+      "#fafae1",
+      "#1d2124",
+      "#dc3545",
+      "#5a6268",
+      "#ff6900"
+    ],
+    "fonts": [],
+    "frameworks": [
+      "Bootstrap"
+    ],
+    "styles_summary": "Detectados 15 colores de acento/paleta distintivos. Tipografías principales: Standard Browser Fonts."
+  },
+  "js_info": {
+    "libraries": [
+      "Next.js",
+      "jQuery"
+    ],
+    "api_endpoints": [],
+    "widgets": [
+      "Meta Pixel (Ads Tracking)",
+      "WhatsApp Chat / Support Directo"
+    ]
+  },
+  "extracted_links": []
+}

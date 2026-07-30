@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ShoppingCart, Building, Layers, Plane, ShieldAlert, Home, ArrowRight, Check } from 'lucide-react';
+import React from 'react';
+import { ShoppingCart, Layers, Plane, Home, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
 
 interface HowItWorksProps {
   onOpenCalculator: () => void;
@@ -10,145 +9,105 @@ interface HowItWorksProps {
 }
 
 export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenCalculator, onOpenBuyForMe }) => {
-  const [activeStep, setActiveStep] = useState(0);
-
   const steps = [
     {
-      num: '01',
+      num: '1',
       title: 'Compras en Tiendas de EE.UU.',
-      subtitle: 'Compras tú mismo o usamos "Compramos por Ti"',
-      desc: 'Elige tus productos favoritos en Amazon, Apple, Nike, eBay, BestBuy, Walmart o cualquier tienda online de EE.UU. Si tu tarjeta es rechazada, nosotros compramos por ti.',
+      desc: 'Realizas tu compra en cualquier tienda de EE.UU. y colocas la dirección de nuestro Casillero Warehouse en Miami.',
       icon: ShoppingCart,
-      color: 'from-blue-500 to-cyan-400',
-      badge: 'Paso 1: Tienda Online'
+      badge: 'Paso 1'
     },
     {
-      num: '02',
-      title: 'Enviadas a tu Casillero en Miami',
-      subtitle: 'Recibimos en nuestro Warehouse propio',
-      desc: 'Colocas tu dirección personalizada de Miami (Casillero Gratuito AEROBOX). Recibimos tu compra, la fotografiamos y la ingresamos a tu casillero digital.',
-      icon: Building,
-      color: 'from-cyan-400 to-emerald-400',
-      badge: 'Paso 2: Miami Warehouse'
-    },
-    {
-      num: '03',
-      title: 'Consolidación & Reempaque Gratis',
-      subtitle: 'Eliminamos peso volumétrico innecesario',
-      desc: 'Juntamos tus paquetes de distintas tiendas en 1 sola caja optimizada. Eliminamos cajas sobrantes y relleno innecesario para ahorrar hasta 60% en peso volumétrico.',
+      num: '2',
+      title: 'Recepción en Miami & Consolidación Opcional',
+      desc: 'Recibimos tu paquete en Miami y lo fotografiamos. Si lo solicitas, consolidamos gratis varios paquetes en 1 sola caja para ahorrar peso.',
       icon: Layers,
-      color: 'from-amber-400 to-rose-400',
-      badge: 'Paso 3: Ahorro Inteligente'
+      badge: 'Paso 2'
     },
     {
-      num: '04',
-      title: 'Vuelo Exprés Miami → Lima',
-      subtitle: 'Tránsito aéreo súper rápido (48-72 hrs)',
-      desc: 'Tus paquetes abordan nuestros vuelos regulares directos a Lima. Carga asegurada en todo momento con número de seguimiento en vivo.',
+      num: '3',
+      title: 'Vuelo Exprés & Despacho SUNAT',
+      desc: 'Vuelo aéreo directo a Lima (48-72h). Gestionamos SUNAT (sin impuestos si tu compra es menor a $200.00 USD).',
       icon: Plane,
-      color: 'from-rose-500 to-brand-red',
-      badge: 'Paso 4: Vuelo Directo'
+      badge: 'Paso 3'
     },
     {
-      num: '05',
-      title: 'Despacho Aduanero SUNAT',
-      subtitle: 'Cero complicaciones administrativas',
-      desc: 'Gestionamos todo el trámite de aduanas SUNAT por ti. Compras menores a $200.00 USD pasan 100% libres de impuestos aduaneros.',
-      icon: ShieldAlert,
-      color: 'from-purple-500 to-pink-500',
-      badge: 'Paso 5: Aduanas Perú'
-    },
-    {
-      num: '06',
-      title: 'Entrega en Puerta / Provincias',
-      subtitle: 'Delivery GRATIS en Lima Metropolitana',
-      desc: 'Recibes tu pedido directamente en la puerta de tu domicilio u oficina en Lima (Delivery GRATIS) o despachamos a cualquier provincia vía Shalom, Olva o Marvisur.',
+      num: '4',
+      title: 'Entrega en tu Casa o Provincias',
+      desc: 'Recibes en la puerta de tu domicilio en Lima (Delivery GRATIS) o despachamos a provincias vía Shalom, Olva, Marvisur o la agencia de transporte que elijas.',
       icon: Home,
-      color: 'from-emerald-400 to-teal-500',
-      badge: 'Paso 6: En Tus Manos'
+      badge: 'Paso 4'
     }
   ];
 
   return (
-    <section id="como-funciona" className="py-24 bg-[#f8f9fa]">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="como-funciona" className="py-12 sm:py-16 bg-slate-50 border-y border-slate-200/80">
+      <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
         
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="text-xs font-bold tracking-widest text-brand-red uppercase bg-brand-red/10 px-3.5 py-1.5 rounded-full">
-            Proceso Transparente
+        {/* Section Header */}
+        <div className="text-center space-y-2 mb-8 sm:mb-10">
+          <span className="text-[11px] font-extrabold tracking-widest text-blue-700 uppercase bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+            Proceso Simple y Transparente
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
-            ¿Cómo funciona <span className="text-brand-red">AEROBOX PRO</span>?
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            ¿Cómo funciona <span className="text-blue-600">AEROBOX PRO</span>?
           </h2>
-          <p className="text-base sm:text-lg text-gray-500">
-            Importar desde Estados Unidos nunca fue tan sencillo. Sigue estos 6 pasos.
+          <p className="text-xs sm:text-sm text-slate-500 font-medium">
+            Traer tus compras desde EE.UU. a Perú es rápido y seguro en 4 pasos concretos.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {steps.map((step, idx) => {
+        {/* Compact Vertical Timeline Flow */}
+        <div className="space-y-3 sm:space-y-4">
+          {steps.map((step) => {
             const Icon = step.icon;
-            const isSelected = activeStep === idx;
             return (
-              <motion.div
+              <div
                 key={step.num}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-                onClick={() => setActiveStep(idx)}
-                className={`bg-white p-8 rounded-xl border transition-all duration-300 cursor-pointer ${
-                  isSelected
-                    ? 'border-brand-red bg-gray-100'
-                    : 'border-gray-200 hover:border-gray-300'
-                }`}
+                className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-blue-300 transition-all flex items-start gap-3.5 sm:gap-5"
               >
-                <span className="inline-block text-[11px] font-bold text-gray-600 bg-gray-200 px-3 py-1 rounded-full mb-6">
-                  {step.badge}
-                </span>
-
-                <div className="w-14 h-14 rounded-xl bg-brand-red/10 flex items-center justify-center text-brand-red mb-6">
-                  <Icon className="w-7 h-7" />
+                {/* Step Icon Badge */}
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0 font-bold">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-xs font-semibold text-gray-500 mb-3">
-                  {step.subtitle}
-                </p>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {step.desc}
-                </p>
+                {/* Step Content */}
+                <div className="space-y-1 flex-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-extrabold text-blue-700 uppercase bg-blue-100/70 px-2 py-0.5 rounded-md">
+                      Paso {step.num}
+                    </span>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                      {step.title}
+                    </h3>
+                  </div>
 
-                <div className="mt-6 flex items-center justify-between text-xs font-bold text-gray-500 pt-4 border-t border-gray-200">
-                  <span>Paso {step.num} de 06</span>
-                  <ArrowRight className={`w-4 h-4 transition-transform ${isSelected ? 'translate-x-1 text-brand-red' : ''}`} />
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                    {step.desc}
+                  </p>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
-        <div className="mt-16 bg-white border border-gray-200 p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-2 text-center md:text-left">
-            <h4 className="text-xl font-bold text-gray-900">¿Listo para calcular el costo de tu primera importación?</h4>
-            <p className="text-sm text-gray-500">Prueba nuestra calculadora de envíos en tiempo real.</p>
-          </div>
-          <div className="flex items-center gap-4 w-full md:w-auto">
-            <button
-              onClick={onOpenCalculator}
-              className="w-full md:w-auto px-7 py-3.5 bg-brand-red hover:bg-brand-red-hover text-gray-900 font-bold text-sm rounded-xl transition-all"
-            >
-              Ir a la Calculadora
-            </button>
-            <button
-              onClick={onOpenBuyForMe}
-              className="w-full md:w-auto px-6 py-3.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-sm rounded-xl border border-gray-300 transition-colors"
-            >
-              Compramos por Ti
-            </button>
-          </div>
+        {/* Action Buttons Row */}
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center gap-3">
+          <button
+            onClick={onOpenCalculator}
+            className="w-full sm:flex-1 py-3 px-5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-md shadow-blue-600/20 flex items-center justify-center gap-2"
+          >
+            <span>Cotizar mi Envío Ahora</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+
+          <button
+            onClick={onOpenBuyForMe}
+            className="w-full sm:w-auto py-3 px-5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center justify-center gap-2"
+          >
+            <Sparkles className="w-4 h-4 text-blue-600" />
+            <span>¿Necesitas Asesoría de Compra?</span>
+          </button>
         </div>
 
       </div>

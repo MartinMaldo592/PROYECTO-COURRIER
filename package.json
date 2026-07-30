@@ -5,7 +5,8 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
-    "anonymize-faces": "pnpm --filter @aerobox/web anonymize-faces"
+    "anonymize-faces": "pnpm --filter @aerobox/web anonymize-faces",
+    "scrape-couriers": "python scripts/courier_scraper/scraper_engine.py"
   },
   "devDependencies": {
     "turbo": "^2.4.0"

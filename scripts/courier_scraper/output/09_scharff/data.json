@@ -1,0 +1,68 @@
+{
+  "id": "09_scharff",
+  "name": "Scharff (FedEx Partner)",
+  "url": "https://holascharff.com/",
+  "category": "Express / Casillero / E-commerce",
+  "description": "Socio autorizado de FedEx en Perú, soluciones de casillero y envíos e-commerce.",
+  "scraped_at": "2026-07-29T18:35:32.804738",
+  "page_title": "Sharf - Líder en operaciones logísticas en el Perú",
+  "meta_description": "Sharf lleva 30 años transformando la logística en el Perú. Brindando Servicios Logísticos para empresas y personas. ¡Descúbrelo aquí!",
+  "headings": [
+    "H3: ¿Dónde está mi pedido?",
+    "H1: ¡Hola! Somos Sharf",
+    "H2: ¿Dónde está mi envío?",
+    "H3: Para emprendedoresy personas",
+    "H3: Para grandes ymedianas empresas",
+    "H2: Llevamos todo a todos lados",
+    "H3: Tenemos una misión clara: acercar",
+    "H2: Sharf al día",
+    "H3: Tendencias globales en embalaje sostenibles para productos industriales",
+    "H3: Cómo afectan las normativas aduaneras a la cadena de suministro",
+    "H3: Proyecciones de exportación de palta: ¿Qué esperar este 2025?",
+    "H3: ¿Qué es un Sistema de Gestión de Almacenes (WMS) y cómo beneficia a tu empresa?",
+    "H3: Cambiando las reglas: Ahora somos una empresa B 🚀",
+    "H3: ¿Cómo hacer envíos de productos? Aprende el paso a paso",
+    "H3: Iniciar sesión"
+  ],
+  "clean_markdown_content": "### ¿Dónde está mi pedido?\n# ¡Hola! Somos Sharf\nLlevamos 40 años **acercándote** a todo el Perú y al mundo.\nConoce lo nuevo\n## ¿Dónde está mi envío?\n### Para emprendedores y personas\nEnvía paquetes desde tu **dirección** o un Punto Sharf.\nEnviar\nEnviar\n### Para grandes y medianas empresas\nSoluciones logísticas 360º adaptadas a tu negocio.\nSaber más\nSaber más\n## Llevamos todo a todos lados\n+ 0 K\nOperaciones anuales\n+ 0\nAños de experiencia\n+ 0\nScharfferos en Perú y Bolivia\n+ 0\nAños representando a FedEx\n### Tenemos una misión clara: acercar\nAcercar a empresas, emprendedores y personas con el Perú y el mundo.\n¿Qué nos mueve? Siempre cuestionar el status quo en la logística. Lo hacemos con una fuerte dosis de empatía e innovación porque creemos que la distancia no es un problema.\nVer más\n## Sharf al día\nagosto 29, 2025\n### Tendencias globales en embalaje sostenibles para productos industriales\nEl embalaje sostenible se ha convertido en un estándar global que conecta la innovación con el cuidado ambiental. ¡Descubre más acerca de las últimas tendencias en empaques sostenibles!\njunio 11, 2025\n### Cómo afectan las normativas aduaneras a la cadena de suministro\n¿Sabías que las normativas aduaneras impactan directamente la cadena de suministro global? Desde demoras y sobrecostos hasta riesgos operativos, estas reglas influyen en cada etapa del proceso. ¡Aprende más aquí!\nmayo 9, 2025\n### Proyecciones de exportación de palta: ¿Qué esperar este 2025?\n¿Sabías que la palta logró consolidarse como uno de los cultivos con mayor proyección para los próximos años? Descubre más sobre las proyecciones de la exportación de palta para el 2025.\nmayo 2, 2025\n### ¿Qué es un Sistema de Gestión de Almacenes (WMS) y cómo beneficia a tu empresa?\n¿Manejas grandes volúmenes de inventario? Entonces, necesitas soluciones tecnológicas, como el Sistema de Gestión de Almacenes (WMS) para perfeccionar tus operaciones. ¡Aprende más a continuación!\njunio 10, 2025\n### Cambiando las reglas: Ahora somos una empresa B 🚀\nEn Sharf, creemos que hacer las cosas bien significa pensar en el impacto que tenemos en las personas y en el planeta. Por eso, nos convertimos en la primera empresa de logística en Perú con Certificación B y ahora somos parte de una red global de más de 9,000 empresas que decidieron cambiar las reglas del juego por el planeta.\nmayo 6, 2025\n### ¿Cómo hacer envíos de productos? Aprende el paso a paso\n¿Tienes una tienda online? En este artículo te explicamos paso a paso cómo organizar envíos eficientes, seguros y sin complicaciones.\nVisita nuestro Blog\n### Iniciar sesión\nIngresa a nuestra plataforma e inicia sesión según tu perfil de usuario:\nPara personas y emprendedores\nPara empresas\n### Regístrate\nCrear cuenta",
+  "css_info": {
+    "colors": [
+      "#006ba1",
+      "#005a87",
+      "#646161",
+      "#444",
+      "#9b51e0",
+      "#34e2e4",
+      "#330968",
+      "#004a59",
+      "#dad0ec",
+      "#E6E5E5",
+      "#cf2e2e",
+      "#7bdcb5",
+      "#4B4B4B",
+      "#67a671",
+      "#f78da7"
+    ],
+    "fonts": [],
+    "frameworks": [],
+    "styles_summary": "Detectados 15 colores de acento/paleta distintivos. Tipografías principales: Standard Browser Fonts."
+  },
+  "js_info": {
+    "libraries": [
+      "Swiper Slider",
+      "Vue.js",
+      "Next.js",
+      "jQuery"
+    ],
+    "api_endpoints": [
+      "https://wsintegracion.holascharff.com/webpage/trackingweb/tracking.asp",
+      "https://envia.holasharf.com/tracking"
+    ],
+    "widgets": [
+      "Google Tag Manager / Analytics",
+      "Meta Pixel (Ads Tracking)",
+      "WhatsApp Chat / Support Directo"
+    ]
+  },
+  "extracted_links": []
+}

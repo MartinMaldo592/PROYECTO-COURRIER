@@ -1,0 +1,62 @@
+{
+  "id": "07_olva_courier",
+  "name": "Olva Courier",
+  "url": "https://www.olvacourier.com/",
+  "category": "Nacional / Tracking / Puntos de Recojo",
+  "description": "Líder en mensajería y paquetería express a nivel nacional en Perú.",
+  "scraped_at": "2026-07-29T18:35:30.609710",
+  "page_title": "Olva",
+  "meta_description": "Especialistas en última milla, brindando servicios de calidad en transporte de encomiendas a domicilio o a cualquiera de nuestras tiendas o agentes a nivel nacional.",
+  "headings": [
+    "H1: Olva",
+    "H2: Lo bueno llega con Olva",
+    "H3: Número de tracking Olva",
+    "H3: Orden de servicio",
+    "H3: Cotiza tu envío",
+    "H3: Regístra tu envío",
+    "H3: Ubícanos",
+    "H3: ¿Tienes un emprendimiento?",
+    "H3: ¿Buscas soluciones logísticas?",
+    "H3: Regular",
+    "H3: Pago en Destino",
+    "H3: Recojo a Domicilio",
+    "H3: Carga",
+    "H3: Envíos Internacionales",
+    "H3: Olva Box"
+  ],
+  "clean_markdown_content": "Regístrate\nInicia sesión\nRegístrate\n# Olva\n## Lo bueno llega con Olva\nRastrea tu envío\nNº de tracking\nOrden de servicio\nGuía de cliente\nTipo de búsqueda\nNº de tracking\nOrden de servicio\nGuía de cliente\nCódigo de seguimiento\nAño de emisión\n20262025202420232022\nBuscar\nOrden de servicio\nAño de emisión\n20262025202420232022\nBuscar\nNúmero interno\nCódigo de guía\nBuscar\ni\n¿Dónde está mi código de seguimiento?\n* ### Número de tracking Olva\n* ### Orden de servicio\nOK\n### Cotiza tu envío\nCalcula el costo de tu paquete en segundos\n### Regístra tu envío\nRegistra tu envío en linea\n### Ubícanos\nConoce nuestras tiendas y agencias\n### ¿Tienes un emprendimiento?\nTarifas preferenciales y envíos prioritarios diseñados para que tus productos lleguen a tiempo.\nOlva Emprendedor\n### ¿Buscas soluciones logísticas?\nOfrecemos infraestructura para grandes volúmenes de envío, pago al crédito, integración tecnológica y reportes detallados.\nOlva Empresas\n+\n0\nAños liderando la logística en el Perú\n+\n0\nTiendas y agentes a nivel nacional\n+\n0\nDestinos activos a nivel nacional.\n+\n0\nEmprendedores confían en nosotros\nConoce a Olva\n### Regular\nEntrega estándar a nivel nacional, con una solución confiable y eficiente para tus envíos.\nMás información\n### Pago en Destino\nEl destinatario paga el envío al momento de recibirlo.\nMás información\n### Recojo a Domicilio\nRecogemos tu envío desde tu casa o negocio.\nMás información\n### Carga\nPara paquetes grandes o pesados que requieren mayor capacidad de transporte.\nMás información\n### Envíos Internacionales\nEnvía documentos y paquetes al extranjero de forma segura.\nMás información\n### Olva Box\nCompra online en cualquier tienda de EE.UU. e importa tus compras a Perú fácil, rápido y seguro\nMás información\n## Últimas Noticias\n* 27 de julio de 2026\n### Horarios de Atención OLVA por Fiestas Patrias 2026\nHORARIO DE ATENCIÓN TIENDAS OLVA – LIMA 28 DE JULIO Importante: El miércoles 29 de…\nServicios\nLeer más →\n* 27 de julio de 2026\n### Tiempos de entrega OLVA a nivel nacional\nConsulta los tiempos estimados de entrega a nivel nacional según el origen y destino de…\nNacional\nLeer más →\n* 16 de julio de 2026\n### Términos y Condiciones: Tarifas Especiales Julio – Región Junín\n1. Organizador La promoción es organizada por Olva Courier S.A.C., RUC 20100686814, con domicilio en…\nServicios\nLeer más →\n* 1 de abril de 2026\n### ¡Atención SMP, nos mudamos a Los Olivos!\n¡Nos mudamos a Los Olivos! Ahora estamos más cerca de ti para brindarte una mejor atención.…\nServicios\nLeer más →\n* 14 de marzo de 2026\n### ¡Atención VMT, nos mudamos!\n¡Villa María del Triunfo, tenemos nueva ubicación! Seguimos contigo, ahora en un punto más cercano…\nNacional\nLeer más →\n* 13 de marzo de 2026\n### ¡Cuídate de las estafas!\nSiempre brindando seguridad y garantía a nuestros clientes, les presentamos los casos de estafas que…\nRetail\nLeer más →\nVer todas las noticias\nCotiza tu envio\nRegistra tu envio\nmodal-check\nDismiss ad\nDismiss ad\nEsto se cerrará en 0 segundos",
+  "css_info": {
+    "colors": [
+      "#F8F9FA",
+      "#1A1A1A",
+      "#F66123",
+      "#FFFDF3",
+      "#FCB414",
+      "#DEE2E6",
+      "#111111",
+      "#E9ECEF",
+      "#f9b52f",
+      "#333333",
+      "#F1F3F5"
+    ],
+    "fonts": [
+      "Inter",
+      "Font Awesome 6 Brands",
+      "Font Awesome 6 Free"
+    ],
+    "frameworks": [],
+    "styles_summary": "Detectados 11 colores de acento/paleta distintivos. Tipografías principales: Inter, Font Awesome 6 Brands, Font Awesome 6 Free."
+  },
+  "js_info": {
+    "libraries": [
+      "Next.js",
+      "jQuery"
+    ],
+    "api_endpoints": [],
+    "widgets": [
+      "Google Tag Manager / Analytics",
+      "Meta Pixel (Ads Tracking)"
+    ]
+  },
+  "extracted_links": []
+}

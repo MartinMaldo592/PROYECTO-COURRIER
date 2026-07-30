@@ -1,0 +1,24 @@
+{
+  "id": "06_perubox",
+  "name": "Peru Box Courier",
+  "url": "https://www.peruboxcourier.com/",
+  "category": "Casillero Virtual & Importación USA",
+  "description": "Courier de importación de compras por internet desde Estados Unidos a Perú.",
+  "scraped_at": "2026-07-29T18:35:10.457846",
+  "page_title": "Peru Box Courier (Página Protegida / Offline)",
+  "meta_description": "",
+  "headings": [],
+  "clean_markdown_content": "No se pudo extraer contenido directamente de https://www.peruboxcourier.com/. Razón: HTTPSConnectionPool(host='www.peruboxcourier.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.peruboxcourier.com', port=443): Failed to resolve 'www.peruboxcourier.com' ([Errno 11001] getaddrinfo failed)\"))",
+  "css_info": {
+    "colors": [],
+    "fonts": [],
+    "frameworks": [],
+    "styles_summary": ""
+  },
+  "js_info": {
+    "libraries": [],
+    "api_endpoints": [],
+    "widgets": []
+  },
+  "extracted_links": []
+}
