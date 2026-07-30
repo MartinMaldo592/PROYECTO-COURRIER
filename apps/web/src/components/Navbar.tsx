@@ -21,16 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenBuyForMe,
   onOpenMiamiAddress,
 }) => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { label: '¿Cómo Funciona?', href: '/#como-funciona', icon: HelpCircle },
@@ -45,13 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/90 backdrop-blur-xl border-b border-slate-200/80 py-3 shadow-md shadow-slate-900/5'
-            : 'bg-white/80 backdrop-blur-md border-b border-slate-200/50 py-4'
-        }`}
-      >
+      <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-slate-200/90 py-3.5 shadow-sm shadow-slate-900/5 h-20 flex items-center">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
             
